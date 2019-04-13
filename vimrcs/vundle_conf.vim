@@ -63,6 +63,10 @@ Plug 'jlanzarotta/bufexplorer'
 
 Plug 'altercation/vim-colors-solarized'
 
+Plug 'kaicataldo/material.vim'
+
+Plug 'sickill/vim-monokai'
+
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'

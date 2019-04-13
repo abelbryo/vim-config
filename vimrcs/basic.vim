@@ -86,15 +86,15 @@ set foldcolumn=1
 """""""""""""""""""""""
 syntax enable
 try
+    colorscheme monokai
     set background=dark
-    colorscheme solarized
 catch
 endtry
 
 if has("gui_running")
     "set guifont=Letter\ Gothic\ for\ Powerline:h12
     set guifont=PragmataPro\ for\ Powerline:h12
-    colorscheme solarized
+    colorscheme monokai
     set background=light
 endif
 
