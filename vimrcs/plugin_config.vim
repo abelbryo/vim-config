@@ -267,4 +267,16 @@ let g:lsc_auto_map = {
   \ 'GoToDefinition': 'gd',
   \}
 
+""""""""""""""""
+" coc settings
+""""""""""""""""
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+
+""""""""""""""""
+" Supertab
+""""""""""""""""
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+
 

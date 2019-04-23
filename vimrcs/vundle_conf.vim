@@ -28,9 +28,15 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'derekwyatt/vim-scala'
 
-Plug 'natebosch/vim-lsc'
+" Plug 'natebosch/vim-lsc'
 
-Plug 'Townk/vim-autoclose'
+"Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
+
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+"Plug 'Townk/vim-autoclose'
+
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'tmhedberg/matchit'
 
@@ -75,12 +81,14 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'vim-scripts/taglist.vim'
 
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.sh
-  endif
-endfunction
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" function! BuildYCM(info)
+"   if a:info.status == 'installed' || a:info.force
+"     !./install.sh
+"   endif
+" endfunction
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+Plug 'ervandew/supertab'
 
 Plug 'eagletmt/ghcmod-vim'
 
@@ -106,7 +114,7 @@ endif
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/MatchTagAlways'
-" Plug 'maxmellon/vim-jsx-pretty'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " ES2015 code snippets
 Plug 'epilande/vim-es2015-snippets'
