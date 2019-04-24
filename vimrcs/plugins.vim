@@ -1,21 +1,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set the runtime path to include Vundle and initialize
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set rtp+=~/.vim/bundle/Vundle.vim
-
-" call vundle#begin()
-
 call plug#begin('~/.vim/plugged')
 
-
-" Alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
-
-" Let Vundle manage Vundle, required
-" ----------------------------------
-Plug 'VundleVim/Vundle.vim'
-
-" ---------------------------------------------------------
 Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-surround'
@@ -50,8 +37,6 @@ Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
 Plug 'mattn/emmet-vim'
 
 Plug 'godlygeek/tabular'
-
-Plug 'maksimr/vim-jsbeautify'
 
 Plug 'mileszs/ack.vim'
 

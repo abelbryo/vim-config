@@ -195,13 +195,6 @@ autocmd BufReadPost *
             \   exe "normal! g`\"" |
             \ endif
 
-
-" Cursor line and cursor column
-"""""""""""""""""""""""""""""""
-" autocmd InsertEnter * highlight Cursor       ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=Yellow gui=bold
-" autocmd InsertLeave * highlight Cursor       ctermfg=Black ctermbg=Yellow cterm=bold guifg=Black guibg=Yellow gui=bold
-" autocmd InsertEnter * highlight CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
-" autocmd InsertLeave * highlight CursorColumn ctermfg=Black ctermbg=Yellow cterm=bold guifg=Black guibg=yellow gui=bold
 set nocursorline
 set nocursorcolumn
 
@@ -217,18 +210,6 @@ if &term =~ "xterm\\|rxvt"
     " use \003]12;gray\007 for gnome-terminal
 endif
 
-"Scalariform
-"""""""""""""
-" au BufEnter *.scala setl formatprg=java\ -jar\ /home/abel/.scripts/scalariform/cli-assembly-0.2.0-SNAPSHOT.jar\ -f\ -q\
-"                                                                              \ +compactControlReadability\
-"                                                                              \ +alignParameters\
-"                                                                              \ +alignArguments\
-"                                                                              \ +alignSingleLineCaseStatements\
-"                                                                              \ +doubleIndentClassDeclaration\
-"                                                                              \ +rewriteArrowSymbols\
-"                                                                              \ +preserveSpaceBeforeArguments\ --stdin\ --stdout
-
-
 au BufEnter *.scala setl formatprg=scalariform\ -f\ -q\
                                                       \ -compactControlReadability\
                                                       \ +alignParameters\
@@ -237,8 +218,6 @@ au BufEnter *.scala setl formatprg=scalariform\ -f\ -q\
                                                       \ +doubleIndentClassDeclaration\
                                                       \ -rewriteArrowSymbols\
                                                       \ +preserveSpaceBeforeArguments\ --stdin\ --stdout
-
-
 
 
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

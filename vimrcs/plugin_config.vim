@@ -26,17 +26,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
-" """""""""""""""""""""""""""""""""""
-" JSBeautify
-" Apply formatting by selecting code
-" """"""""""""""""""""""""""""""""""""
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
-
-
 autocmd Filetype html       setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby       setlocal ts=2 sw=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -58,13 +47,6 @@ let g:jsx_ext_required = 0
 " Trigger snippets
 let g:UltiSnipsExpandTrigger="<C-l>"
 
-"""""""""""""""""""""
-" Vim-Jsx-Pretty
-""""""""""""""""""""""
-"let g:vim_jsx_pretty_enable_jsx_highlight = 1 " default 1
-"let g:vim_jsx_pretty_colorful_config      = 1 " default 0
-
-
 
 """"""
 " Ack
@@ -78,15 +60,6 @@ endif
 """"""""""""""""""""
 nmap L :bn<CR>
 nmap H :bp<CR>
-
-" MiniBufExpl Colors
-" hi MBENormal               guifg=#808080 guibg=fg
-" hi MBEChanged              guifg=#CD5907 guibg=fg
-" hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-" hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-" hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
-" hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
-"
 
 """"""""""""""""""""
 " BufExplorer plugin
@@ -246,6 +219,4 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " Supertab
 """"""""""""""""
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-
 
