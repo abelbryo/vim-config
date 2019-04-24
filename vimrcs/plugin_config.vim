@@ -18,10 +18,10 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 
-set wildignore+=*/tmp/*,*/target/*,*.so,*.swp,*.zip,*.class,*/.idea/*,*/.bloop/*,*/.metals/*     " MacOSX/Linux
+set wildignore+=*/tmp/*,*/node_modules/*,*/target/*,*.so,*.swp,*.zip,*.class,*/.idea/*,*/.bloop/*,*/.metals/*     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'target|dist|vendor|\.git$\|\.hg$\|\.svn$\|\.yardoc$|.idea$',
+  \ 'dir':  'target|dist|node_modules|vendor|\.git$\|\.hg$\|\.svn$\|\.yardoc$|.idea$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 
@@ -193,17 +193,6 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
-""""""""""""""""""""""
-" ensime-vim
-""""""""""""""""""""""
-let ensime_server_v2=1
-
-"""""""""""""""""""""
-" dbext.vim
-"""""""""""""""""""""
-" let g:dbext_default_profile_postgres_docker = 'type=POSTGRESQL:user=woodmarket_user:passwd=woodmarket:dbname=woodmarket:host=192.168.99.100/woodmarket'
-let g:dbext_default_profile_woodmarket='type=PGSQL:host=192.168.99.100:user=woodmarket_user:dbname=woodmarket:passwd=woodmarket'
-let g:dbext_default_profile='woodmarket'
 
 """"""""""""""""""""""""""
 " SQL Format
@@ -220,18 +209,6 @@ let g:sqlfmt_options = "-r -k upper"
 " tern gb keybinding for moving the cursor straight to a variable definition
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" SBT-neovim
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('nvim')
-  set signcolumn=yes
-  let g:LanguageClient_autoStart = 1
-  let g:LanguageClient_serverCommands = {
-      \ 'scala': ['node', expand('~/.bin/sbt-server-stdio.js')]
-      \ }
-  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-endif
-""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 " """""""""""""""""""""""""""""
@@ -252,20 +229,12 @@ let g:tex_flavor='latex'
 set diffopt+=vertical
 
 
-
 """"""""""""
 " vim-lsc
 """"""""""""
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
-let g:lsc_enable_autocomplete = v:false
-let g:lsc_server_commands = {
-  \ 'scala': 'metals-vim'
-  \}
-let g:lsc_auto_map = {
-  \ 'GoToDefinition': 'gd',
-  \}
 
 """"""""""""""""
 " coc settings

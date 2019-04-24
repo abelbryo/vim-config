@@ -26,15 +26,11 @@ Plug 'tpope/vim-jdaddy'
 
 Plug 'scrooloose/nerdtree'
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'derekwyatt/vim-scala'
 
-" Plug 'natebosch/vim-lsc'
-
-"Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
-
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
-"Plug 'Townk/vim-autoclose'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -61,11 +57,7 @@ Plug 'mileszs/ack.vim'
 
 Plug 'rust-lang/rust.vim'
 
-" Plug 'fholgado/minibufexpl.vim'
-
 Plug 'jlanzarotta/bufexplorer'
-
-" Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -81,13 +73,6 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'vim-scripts/taglist.vim'
 
-" function! BuildYCM(info)
-"   if a:info.status == 'installed' || a:info.force
-"     !./install.sh
-"   endif
-" endfunction
-" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-
 Plug 'ervandew/supertab'
 
 Plug 'eagletmt/ghcmod-vim'
@@ -101,15 +86,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'quramy/tsuquyomi'
-
-if has('nvim')
-    " Plug 'eed3si9n/LanguageClient-neovim', {'do' : ':UpdateRemotePlugins'}
-
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
-endif
 
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
