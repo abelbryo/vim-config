@@ -6,7 +6,7 @@
 " """"""""
 " CtrlP
 " """""""""
-" let g:ctrlp_user_command    = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 "
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
@@ -139,10 +139,10 @@ set tags=tags,./tags; " By default vim will only look for the tags in the dir of
                       " open in the current buffer. This will make vim move up the dir
                       " hierarchy until it has found the file.
 
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_Ctags_Cmd = system('which ctags')
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
-map <F8> :!/usr/local/bin/ctags -R --exclude=@/Users/aterefe/.ctagsignore --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F8> :!ctags  -R --exclude=@$HOME/.ctagsignore --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 "ctags -R --exclude=target --exclude=vendor
 
 " To find for tags put the cursor on the word
