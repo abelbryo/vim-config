@@ -86,7 +86,7 @@ set foldcolumn=1
 """""""""""""""""""""""
 syntax enable
 try
-    colorscheme monokai
+    colorscheme gruvbox
     set background=dark
 catch
 endtry
@@ -94,7 +94,7 @@ endtry
 if has("gui_running")
     "set guifont=Letter\ Gothic\ for\ Powerline:h12
     set guifont=PragmataPro\ for\ Powerline:h12
-    colorscheme monokai
+    colorscheme gruvbox
     set background=light
 endif
 

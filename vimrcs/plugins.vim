@@ -27,12 +27,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'airblade/vim-gitgutter'
 
-function! BuildTern(info)
-  if a:info.status == 'installed' || a:info.force
-    !npm install
-  endif
-endfunction
-Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
+" function! BuildTern(info)
+"   if a:info.status == 'installed' || a:info.force
+"     !npm install
+"   endif
+" endfunction
+" Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
 
 Plug 'mattn/emmet-vim'
 
@@ -45,6 +45,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'jlanzarotta/bufexplorer'
 
 Plug 'altercation/vim-colors-solarized'
+
+Plug 'morhetz/gruvbox'
 
 Plug 'kaicataldo/material.vim'
 
@@ -68,23 +70,11 @@ Plug 'vim-scripts/dbext.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'Valloric/MatchTagAlways'
+
 Plug 'leafgarland/typescript-vim'
 
-Plug 'quramy/tsuquyomi'
-
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'Valloric/MatchTagAlways'
-Plug 'maxmellon/vim-jsx-pretty'
-
-" ES2015 code snippets
-Plug 'epilande/vim-es2015-snippets'
-
-" React code snippets (Optional)
-Plug 'epilande/vim-react-snippets'
-
-" Ultisnips
-Plug 'SirVer/ultisnips'
+Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
@@ -97,11 +87,8 @@ Plug 'jackc/sqlfmt'
 Plug 'andialbrecht/sqlparse'
 Plug 'b4b4r07/vim-sqlfmt'
 
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
-
 Plug 'wincent/terminus'
+
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
