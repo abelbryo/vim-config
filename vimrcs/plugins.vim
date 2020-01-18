@@ -27,13 +27,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'airblade/vim-gitgutter'
 
-" function! BuildTern(info)
-"   if a:info.status == 'installed' || a:info.force
-"     !npm install
-"   endif
-" endfunction
-" Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
-
 Plug 'mattn/emmet-vim'
 
 Plug 'godlygeek/tabular'
@@ -83,9 +76,9 @@ Plug 'racer-rust/vim-racer'
 
 Plug 'vim-latex/vim-latex'
 
-Plug 'jackc/sqlfmt'
-Plug 'andialbrecht/sqlparse'
-Plug 'b4b4r07/vim-sqlfmt'
+" Plug 'jackc/sqlfmt'
+" Plug 'andialbrecht/sqlparse'
+" Plug 'b4b4r07/vim-sqlfmt'
 
 Plug 'wincent/terminus'
 
